@@ -13,7 +13,7 @@
     )
   language: pygrep
   types: [python]
-  files: ^urls.py$
+  files: urls.py$
 - id: django-invalid-perm
   name: No invalid Permission codenames
   description: Warn if `has_perm` or `permission_required` uses an invalid perm
