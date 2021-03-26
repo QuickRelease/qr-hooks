@@ -1,5 +1,19 @@
 A collection of useful pre-commit hooks
 
+## Hooks
+
+### django-no-auto-migrations
+
+Detect auto-named migrations eg. `0000_auto_202012251330.py`
+
+### django-url-trailing-slash
+
+Detect any URL paths in `urls.py` without a trailing slash
+
+### django-invalid-perm
+
+Detect `has_perm` or `@permission_required` usage with an invalid perm (eg. `has_perm("core:add_user")`)
+
 ## TODO
 
 ### django-invalid-perm
