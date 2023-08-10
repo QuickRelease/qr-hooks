@@ -19,3 +19,18 @@ Detect `has_perm` or `@permission_required` usage with an invalid perm (eg. `has
 ### django-invalid-perm
 
 - Update regex for `permission_required` to account for multiple permissions eg. detect `@permission_required(["user.change_user", "user:add_user"])`
+
+
+## Contributing
+
+Create a virtual env and install the requirements:
+
+```cmd
+pip install -r requirements/test.txt
+```
+
+Run the tests:
+
+```cmd
+pytest
+```
