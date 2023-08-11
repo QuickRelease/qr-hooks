@@ -51,7 +51,6 @@ def test_path_pass(missing_trailing_slash, s):
         '(r"^accounts/logout$", signout),',
         '("^accounts/logout$", signout),',
         '(r"^accounts/logout", signout),',
-        '(r"^media/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT})',
         """(
             r"^my-view$",
             my_view,
@@ -71,7 +70,8 @@ def test_url_fail(missing_trailing_slash, url_func, indent, s):
         '("", include("core.urls")),',
         '("^accounts/logout/$", signout),',
         '(r"^accounts/logout/", signout),',
-        '(r"^media/(?P<path>.*)/$", serve, {"document_root": settings.MEDIA_ROOT})',
+        '(r"^media/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT})',
+        '(r"^user-guide/(?P<path>.*)$", serve_user_guide)',
         """(
             r"^my-view/$",
             my_view,
