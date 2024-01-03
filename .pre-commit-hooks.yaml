@@ -20,3 +20,9 @@
   entry: (has_perm|@permission_required)\(["'][^\."']+["']\)
   language: pygrep
   types: [python]
+#  when calling this hook in a repo you must add args: [<path to local settings e.g. qrhub.settings.local>] in the repo .pre-commit-config.yaml file
+- id: create-django-diagrams
+  name: Create Django Diagrams
+  entry: bash generate_diagrams.sh
+  language: system
+  files: ^.*/migrations/.*\.py$
