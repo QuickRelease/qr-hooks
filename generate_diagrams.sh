@@ -10,8 +10,6 @@ SETTINGS_MODULE="$1"
 
 shift
 
-declare -A unique_apps
-
 MIGRATIONS=$@
 
 declare -a APP_NAMES=()
