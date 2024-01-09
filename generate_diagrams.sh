@@ -2,10 +2,8 @@
 
 directory="./docs/model_diagrams/"
 
-if [ ! -d "$directory" ]; then
-    # If the directory doesn't exist, create it
-    mkdir -p $directory
-fi
+# If the directory doesn't exist, create it
+mkdir -p $directory
 
 
 SETTINGS_MODULE="$1"
