@@ -1,9 +1,9 @@
 #!/bin/bash
 
-directory="./docs/model_diagrams/"
+DIRECTORY="./docs/model_diagrams/"
 
 # If the directory doesn't exist, create it
-mkdir -p $directory
+mkdir -p $DIRECTORY
 
 
 SETTINGS_MODULE="$1"
@@ -21,7 +21,7 @@ done
 FINAL_APP_NAMES=($(echo "${APP_NAMES[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
 
 for APP in "${FINAL_APP_NAMES[@]}"; do
-    python -m django_diagram -a $APP -o ./docs/model_diagrams/$APP.md -s $SETTINGS_MODULE
+    python -m django_diagram -a $APP -o $DIRECTORY/$APP.md -s $SETTINGS_MODULE
 done
 
-git add ./docs/model_diagrams/
+git add $DIRECTORY
